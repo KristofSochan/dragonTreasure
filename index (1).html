@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Final Project</title>
+<script src="../_JS/finalProject.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="../_CSS/finalProject.css">
+</head>
+<body onLoad="message1();">
+
+	<div id="content">
+		<div id="messaging">
+			<!-- Each paragraph tag with ID "messageX" is simply the messages displayed to the user. -->
+			<p id="message1"></p>
+			<!-- Forms are used so that when enter is pressed the form can evoke userRespondedX(). -->
+			<form action="javascript:userResponded1()" autocomplete="off">
+				<!-- Autofocus allows the input boxes to be typed on right away, creating the "command prompt" style typing. -->
+				<input class="response" id="response1" type="text" autofocus>	
+				<!-- The submit button is just there for functional purposes, and is hidden so the user cannot see it. -->			
+				<input type="submit" style="display:none">
+			</form>
+			<p id="message2"></p>
+			<form action="javascript:userResponded2()" autocomplete="off">
+				<input class="response" id="response2" type="text">
+				<input type="submit" style="display:none">
+			</form>
+			<p id="message3Pt1"></p>
+			<p id="message3Pt2"></p>
+			<form action="javascript:userResponded3()" autocomplete="off">
+				<input class="response" id="response3" type="text">
+				<input type="submit" style="display:none">
+			</form>
+			<p id="message4Pt1"></p>
+			<p id="message4Pt2"></p>
+			<input class="response" id="responseDummy" type="text">
+		</div>
+		<div id="classSelector">
+			<h1>CHOOSE YOUR CHARACTER</h1>
+			<div id="classes">
+				<!-- Each of the following 3 img tags are the images that user can click on to choose their character. -->
+				<img src="../_images/char1.png" class="classImages" onClick="choseEggsy()">
+				<img src="../_images/char2.png" class="classImages" onClick="choseSantiago()">
+				<img src="../_images/char3.png" class="classImages" onClick="choseHans()">
+			</div>
+			<div id="descriptions"> 
+				<!-- The tons of non-brekaing spaces are used to put the names of the characters underneath their respective character picture. Unfortunately this is only made for surface screens and would look misaligned on any other device... -->
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="eggsy">Eggsy</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="santiago">Santiago</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span id="hans">Hans</span>
+			</div>
+		</div>
+		<div id="gameSelector">
+			<h1>CHOOSE YOUR GAME</h1>
+			&nbsp;&nbsp;&nbsp;
+			<button class="gameButtons" onClick="initializeArcadeGame()">Arcade Game</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<button class="gameButtons" onClick="runReactionGame()">Reaction Game</button>
+		</div>
+		<div id="instructions">
+			<!-- The first <span> tag is used to display the picture of whichever character has been chosen. -->
+			<span id="charPic"></span>
+			<!-- The next paragraph tags are once again just simple messages to the user. The content of these messages is different depending on which character has been chosen. -->
+			<p id="instruct1"></p>
+			<p id="instruct2"></p>
+			<p id="instruct3"></p>
+			<p id="instruct4"></p>
+			<p id="instruct5"></p>
+			<form action="javascript:userStarts()" autocomplete="off">
+				<input class="response" id="userStarts" type="text">
+				<input type="submit" style="display:none">
+			</form>
+		</div>
+		<div id="game">
+			<!-- These are the statistics displayed at the bottom of the screen. When function runGame() is ran, the gameboard (canvas) will be inserted as the first currently displayed childnode of the body element. -->
+			<div id="levelNum"></div>
+			<div id="lives"></div>
+			<div id="score"></div>
+			<div id="time"></div>
+			<div id="codes"></div>
+			<hr>
+			<div id="arcadeInstructions1"></div>
+			<div id="arcadeInstructions2"></div>
+		</div>
+		<div id="reactionGame">
+			<button id="reactionButton" onClick="checkReaction()">Click when you see green</button>
+			<!-- Statistics displayed at the bottom of the screen in the reaction speed game. -->
+			<div id="reactLevelNum"></div>
+			<div id="reactLives"></div>
+			<div id="reactSpeed"></div>
+			<div id="reactCodes"></div>
+			<hr>
+			<div id="reactionInstructions1"></div>
+			<div id="reactionInstructions2"></div>
+			<div id="reactionInstructions3"></div>
+		</div>
+		<!-- Screen for when the user loses. Paragraph tags used to display final messages. -->
+		<div id="loseScreen">
+			<p id="lose1"></p>
+			<p id="lose2"></p>
+			<p id="lose3"></p>
+			<p id="lose4"></p>
+			<p id="lose5"></p>
+			<p id="lose6"></p>
+			<!-- The response of this input is not used for anything; it is just to simulate the command prompt effect. -->
+			<input class="response" id="responseDummy2" type="text">			
+		</div>
+		<div id="winScreen">
+			<p id="win1"></p>
+			<p id="win2"></p>
+			<!-- Each of the following three forms are used to check if the codes the user has submitted are valid. -->
+			<form action="javascript:winResponse1()" autocomplete="off">
+				<input class="response" id="winResponse1" type="text">			
+				<input type="submit" style="display:none">
+			</form>
+			<p id="win3"></p>
+			<form action="javascript:winResponse2()" autocomplete="off">
+				<input class="response" id="winResponse2" type="text">			
+				<input type="submit" style="display:none">
+			</form>
+			<p id="win4"></p>
+			<form action="javascript:winResponse3()" autocomplete="off">
+				<input class="response" id="winResponse3" type="text">			
+				<input type="submit" style="display:none">
+			</form>
+			<p id="win5"></p>
+			<p id="win6"></p>
+			<p id="win7"></p>
+			<p id="win8"></p>
+			<p id="win9"></p>
+			<input class="response" id="responseDummy3" type="text">	
+		</div>
+	</div>
+</body>
+</html>
