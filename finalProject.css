@@ -1,0 +1,126 @@
+/* Sets the entire background of the page black, and sets default styling for color and font-family. */
+body {
+  background-color: black;
+  font-family: monospace;
+color: #55ff55;
+}
+/* Sets default font-size for all paragraph tags. */
+p {
+	font-size: 16px;
+}
+/* Gets rid of ugly blue outline when input boxes are hovered over. */
+input:focus{
+    outline: none;
+}
+/* Sets various functional and visual aspects of the canvas element. */
+canvas {
+	width: 100%;
+    height: 550px;
+	padding: 0;
+    margin: auto;
+    display: inline;
+	background-color: black;
+	border: 1px solid #08cb08;
+	/* Makes the border only exist on the top and bottom sides. */
+	border-left-style: none;
+	border-right-style: none;
+
+}
+hr {
+	border-color: #08cb08;
+}
+/* Styles the input boxes that the user types in. */
+.response {
+	background-color: black;
+	border-color: black;
+	font-family: monospace;
+	font-size: 16px;
+	color: #55ff55;
+}
+#classSelector {
+	text-align: center;
+	font-family: monospace;
+	color: #08cb08;
+	font-size: 32px;
+	display: none;
+}
+#classes {
+	text-align: center;
+	
+}
+#classes p {
+	width: 241;
+}
+/* Adds padding between each character image. */
+.classImages {
+	padding: 70px;
+}
+/* Gives visual feedback "bump" when character images are hovered over. */
+.classImages:hover{ 
+	position: relative;
+   	top: -10px;
+} 
+#descriptions {
+	text-align: left;
+	position: relative;
+	top: -70px;
+}
+/* The  div (with id "game") is set to intially have a display of none so it does not show until the canvas and statistics should be displayed. */
+#instructions {
+	display: none;
+}
+/* The game div (with id "game") is set to intially have a display of none so it does not show until the canvas and statistics should be displayed. */
+#game {
+	display: none;
+	color: #08cb08;
+	font-size: 20px;
+}
+/* Styles the screen where the user chooses a game. */
+#gameSelector {
+	text-align: center;
+	font-family: monospace;
+	color: #08cb08;
+	font-size: 45px;
+	display: none;
+}
+/* Styles the buttons found on the choose game page. */
+.gameButtons {
+	margin-top: 75px;
+	background-color: black;
+	border: 2px solid #08cb08;
+	color: #08cb08;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: monospace;
+	font-size: 75px;
+}
+/* Styles the text of the reaction game screen. */
+#reactionGame {
+	display: none;
+	color: #08cb08;
+	font-size: 20px;
+}
+/* Styles the big red button, as well as the text shown inside the button. */
+#reactionButton {
+	width: 500px;
+	height: 500px;
+	border: 0;
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: monospace;
+	font-size: 48px;
+}
+/* Gets rid of ugly default outline/border when the button is clicked on. */
+#reactionButton:focus {
+	outline: 0;
+	border: 0;
+}
+#loseScreen {
+	display: none;
+}
+#winScreen {
+	display: none;
+}
