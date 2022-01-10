@@ -676,7 +676,7 @@ function winResponse3() {
 			setTimeout(function(){ typeWriter("IT WORKED! Thank you, oh, thank you. You don't know how much this means to me.", "win5", 0); }, 2000);
 			// Lists the first, second, and third code submitted in order.
 			setTimeout(function(){ typeWriter(usedCodes[0] + ", " + usedCodes[1] + ", " + usedCodes[2] + "... Who would've thought a man could be so happy to hear three little numbers...", "win6", 0); }, 6500);
-			setTimeout(function(){ typeWriter("Well, here's where we say our goodbyes, huh. I never got the change to know you, but I think we would've gotten along well.", "win7", 0); }, 10500);
+			setTimeout(function(){ typeWriter("Well, here's where we say our goodbyes, huh. I never got the chance to know you, but I think we would've gotten along well.", "win7", 0); }, 10500);
 			setTimeout(function(){ typeWriter("So long.", "win8", 0); }, 17500);
 			setTimeout(function(){ typeWriter("-Frank M.", "win9", 0); }, 20500);
 			document.getElementById("responseDummy3").focus();
